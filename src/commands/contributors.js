@@ -1,9 +1,9 @@
 const { SlashCommandBuilder, EmbedBuilder, MessageFlags } = require("discord.js")
-const { discinv } = require("../../config.json")
+const { contrib } = require("../../contributors.json")
 module.exports = {
     data: new SlashCommandBuilder()
-        .setName("support-server")
-        .setDescription("MindCleanser support server")
+        .setName("contributors")
+        .setDescription("Sends Github contributors")
         .addBooleanOption(option =>
             option.setName("private")
             .setDescription("Can others see this message?")
@@ -15,8 +15,8 @@ module.exports = {
         const hide = interaction.options.getBoolean("private")
 
         const embed = new EmbedBuilder()
-        .setTitle("support server")
-        .setDescription(`[Click here to join the support server](${discinv}) (NOT FOR MENTAL HEALTH SUPPORT)`)
+        .setTitle('these Github users have contributed to the bots developement')
+        .setDescription(`${contrib}`)
 
         if(hide == true) {
             interaction.reply({

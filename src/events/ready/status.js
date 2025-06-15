@@ -6,6 +6,6 @@ console.log(`Logged in as ${c.user.tag}`)
 client.user.setActivity({
     name:(`Helping ${c.guilds.cache.size} servers`),
     type: ActivityType.Streaming,
-    url:("https://www.youtube.com/watch?v=dQw4w9WgXcQ") 
+    url:("https://www.twitch.tv/mindcleanser/about") 
 })
 }
