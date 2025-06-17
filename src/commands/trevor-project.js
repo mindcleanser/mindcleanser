@@ -2,7 +2,7 @@ const { SlashCommandBuilder, EmbedBuilder, MessageFlags } = require("discord.js"
 
 const { trevorprojnum, trevorprojweb } = require("../../config.json")
 
-const { invite } = require("../../config.json")
+
 module.exports = {
     data: new SlashCommandBuilder()
         .setName("trevor-project")
